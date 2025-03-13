@@ -1,7 +1,7 @@
 /* rnscf stylesheet */
 :root {
-    --grey: #1a1a1a;
-    --white: #ccc;
+    --grey: #1e1e1e;
+    --white: #d0d0d1;
 }
 *, html {
     margin: 0;
@@ -76,4 +76,29 @@ nav a {
 footer {
     text-align: center;
     padding: 1em;
+}
+
+/* dark mode */
+
+#dark-mode-btn {
+    color: var(--grey);
+    text-align: center;
+    width: 25px;
+    cursor: pointer;
+    position: fixed;
+    font-size: 30px;
+    right: 25px;
+    top: 5px;
+    overflow: hidden;
+}
+
+body.dark-mode {
+    background-color: var(--grey);
+}
+
+body.dark-mode,
+body.dark-mode #dark-mode-btn,
+body.dark-mode a,
+body.dark-mode p {
+    color: var(--white);
 }
