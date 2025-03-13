@@ -6,12 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
         let listPosts = document.getElementById("list-posts");
 
         posts.forEach(post => {
-            let item = document.createElement("li");
+            let item = document.createElement("div");
+            item.classList.add("card");
+            const date = new Date(post.date).toLocaleDateString('pt-BR');
             item.innerHTML = `
                 <a href="post.html?id=${post.id}&slug=${post.slug}">
-                    <h3>${post.title}</h3>
-                    <p>${post.date}</p>
-                    <p>${post.summary}</p>
+                    <h3 id="post-title">${post.title}</h3>
+                    <p id="post-summary">${post.summary}</p>
+                    <p id="post-date">Publicado em: ${date}</p>
                 </a>
             `;
             listPosts.appendChild(item);

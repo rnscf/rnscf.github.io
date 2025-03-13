@@ -1,1 +1,79 @@
 /* rnscf stylesheet */
+:root {
+    --grey: #1a1a1a;
+    --white: #ccc;
+}
+*, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    text-align: center;
+    padding: 1em;
+}
+
+nav a {
+    color: var(--grey);
+    text-decoration: none;
+    font-size: 2cap;
+    padding: 0 0.2em;
+}
+
+.container {
+    margin: 1em;
+    padding: 1em;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 700px;
+    }
+}
+
+.container section ul {
+    margin: 0;
+}
+
+.card {
+    margin: 5px 0px;
+}
+
+.card a {
+    color: var(--grey);
+    text-decoration: none;
+}
+
+#post-summary {
+    margin-bottom: 1em;
+}
+
+#post-title, h1 {
+    font-size: 2cap;   
+    margin-bottom: 0.5em;
+}
+
+#post-date {
+    font-size: 0.7em;
+}
+
+#post-time {
+    font-size: 0.7em;
+    margin-bottom: 1em;
+}
+
+#post-content p {
+    margin-bottom: 1em;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+}

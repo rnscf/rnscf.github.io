@@ -19,10 +19,11 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             document.title = post.title;
+            const date = new Date(post.date).toLocaleDateString('pt-BR');
             document.getElementById("post-title").textContent = post.title;
-            document.getElementById("post-date").textContent = `Publicado em: ${post.date}`;
+            document.getElementById("post-date").textContent = `Publicado em: ${date}`;
             document.getElementById("post-time").textContent = `Tempo de leitura: ${post.time} min`;
-            document.getElementById("post-content").innerHTML = `<p>${post.content}</p>`;
+            document.getElementById("post-content").innerHTML = `${post.content}`;
         })
 
         .catch(error => console.error("Erro ao carregar o post:", error));
