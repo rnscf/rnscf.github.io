@@ -1,9 +1,8 @@
 nav = document.getElementById("nav");
 
 html = `
-<a href="index.html">Rnscf</a>
-<a href="about.html">Sobre</a>
-<a href="contact.html">Contato</a>
+<a href="index.html">RNSCF</a>
+<a href="blog.html">BLOG</a>
 `;
 
 nav.innerHTML = html;
