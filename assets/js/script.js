@@ -30,13 +30,13 @@ function darkMode() {
         if (body.classList.contains("dark-mode")) {
             localStorage.setItem("darkMode", "enabled");
             localStorage.setItem("darkIcon", `<span>☀</span>`);
-            localStorage.setItem("darkColor", "#d0d0d1");
-            darkModeBtn.innerHTML = `<span style="color:#d0d0d1;">☀</span>`;
+            localStorage.setItem("darkColor", "#E8E8E8");
+            darkModeBtn.innerHTML = `<span style="color:#E8E8E8;">☀</span>`;
         } else {
             localStorage.setItem("darkMode", "disabled");
             localStorage.setItem("darkIcon", `<span>☾</span>`);
-            localStorage.setItem("darkColor", "#1e1e1e");
-            darkModeBtn.innerHTML = `<span style="color:#1e1e1e;">☾</span>`;
+            localStorage.setItem("darkColor", "#212121");
+            darkModeBtn.innerHTML = `<span style="color:#212121;">☾</span>`;
         }
     }
 

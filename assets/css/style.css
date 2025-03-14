@@ -1,7 +1,7 @@
 /* rnscf stylesheet */
 :root {
-    --grey: #1e1e1e;
-    --white: #d0d0d1;
+    --grey: #212121;
+    --white: #E8E8E8;
 }
 *, html {
     margin: 0;
@@ -35,7 +35,6 @@ nav a {
     color: var(--grey);
     text-decoration: none;
     font-size: 2cap;
-    font-weight: bold;
     padding: 0 0.2em;
 }
 
@@ -69,6 +68,7 @@ nav a {
 }
 
 #post-title, h1 {
+    font-weight: normal;
     font-size: 2cap;   
     margin-bottom: 0.5em;
 }
@@ -100,7 +100,6 @@ footer {
     cursor: pointer;
     position: fixed;
     font-size: 30px;
-    font-weight: bold;
     right: 12px;
     top: 12px;
     overflow: hidden;
