@@ -1,4 +1,23 @@
 /* rncsf global js */
+function navbarScroll() {
+    let prevScrollPos = window.scrollY;
+    const navbar = document.getElementById("nav");
+    const darkModeBtn = document.getElementById("dark-mode-btn");
+
+    window.onscroll = function() {
+        let currentScrollPos = window.scrollY;
+
+        if (prevScrollPos > currentScrollPos) {
+            navbar.classList.remove("hidden");
+            darkModeBtn.classList.remove("hidden");
+        } else {
+            navbar.classList.add("hidden");
+            darkModeBtn.classList.add("hidden");
+        }
+
+        prevScrollPos = currentScrollPos;
+    };
+}
 
 function darkMode() {
     const darkModeBtn = document.getElementById("dark-mode-btn");
@@ -10,14 +29,14 @@ function darkMode() {
 
         if (body.classList.contains("dark-mode")) {
             localStorage.setItem("darkMode", "enabled");
-            localStorage.setItem("darkIcon", `<i>&#9737;</i>`);
+            localStorage.setItem("darkIcon", `<span>☀</span>`);
             localStorage.setItem("darkColor", "#d0d0d1");
-            darkModeBtn.innerHTML = `<i style="color:#d0d0d1;">&#9737;</i>`;
+            darkModeBtn.innerHTML = `<span style="color:#d0d0d1;">☀</span>`;
         } else {
             localStorage.setItem("darkMode", "disabled");
-            localStorage.setItem("darkIcon", `<i>&#9789;</i>`);
+            localStorage.setItem("darkIcon", `<span>☾</span>`);
             localStorage.setItem("darkColor", "#1e1e1e");
-            darkModeBtn.innerHTML = `<i style="color:#1e1e1e;">&#9789;</i>`;
+            darkModeBtn.innerHTML = `<span style="color:#1e1e1e;">☾</span>`;
         }
     }
 
@@ -25,7 +44,8 @@ function darkMode() {
 }
 
 function main() {
-    darkMode();    
+    darkMode();
+    navbarScroll();    
 }
 
 main();
