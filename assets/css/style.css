@@ -17,9 +17,8 @@ nav {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px, rgba(0, 0, 0, 0.24) 0px 1px 1px;
     position: fixed;
-    display: flex;
     padding: 1em;
-    align-items: center;    
+    text-align: left;   
     padding: 20px 10px;      
     top: 0;
     width: 100%;
@@ -45,6 +44,9 @@ nav a {
 }
 
 @media (min-width: 768px) {
+    nav {
+        text-align: center;
+    }
     .container {
         width: 700px;
     }
@@ -54,8 +56,25 @@ nav a {
     margin: 0;
 }
 
+.social {
+    display: flex;
+}
+
+.mail-icon {
+    stroke: var(--grey);
+}
+
+.bsky-icon {
+    stroke: var(--grey);
+    fill: var(--grey)
+}
+
+.social p {
+    margin: 2px 0px 0px 5px;
+}
+
 .card {
-    margin: 5px 0px;
+    margin: 10px 0px;
 }
 
 .card a {
@@ -119,6 +138,16 @@ body.dark-mode nav {
 body.dark-mode,
 body.dark-mode #dark-mode-btn,
 body.dark-mode a,
-body.dark-mode p {
+body.dark-mode p,
+body.dark-mode .icon {
     color: var(--white);
+}
+
+body.dark-mode .mail-icon {
+    stroke: var(--white);
+}
+
+body.dark-mode .bsky-icon {
+    stroke: var(--white);
+    fill: var(--white)
 }
